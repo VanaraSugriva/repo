@@ -19,3 +19,14 @@
 '''
 
 ip = '192.168.3.1'
+ip_template = '''
+IP address:
+{0:<10}{1:<10}{2:<10}{3:<10}
+{0:8b} {1:8b} {2:8b} {3:8b}'''
+ 
+# как бы сделать с одной строчкой, чтобы не каждый элемент обрабатывать?
+# print(ip_template.format(', '.join(ip.split('.'))))
+# bin(int(ip.replace('.','')))[2:10]
+
+octets = ip.split('.')
+ip_template.format(int(octets[0]), int(octets[1]), int(octets[2]), int(octets[3]))
