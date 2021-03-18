@@ -1,3 +1,4 @@
+#/usr/bin/env python
 # -*- coding: utf-8 -*-
 '''
 Задание 5.1c
@@ -48,3 +49,9 @@ london_co = {
         'routing': True
     }
 }
+
+dev = input('dev: ')
+params_list = ', '.join(london_co[dev].keys())
+param = input(f'param ({params_list}): ')
+print(london_co[dev].get(param, 'Param is not correct'))
+
